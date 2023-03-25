@@ -1,0 +1,20 @@
+
+<header>
+    <div class="headerIcon">
+        <img src="./assets/img/icons/IconHeader.png" />
+    </div>
+    <div class="headerProfile">
+        <a class="header-text" href="#">Kanban Project Managment Tool</a>
+        <a class="header-help" href="./help.html"><img style="padding: 30px; cursor: pointer" src="./assets/img/QuestionIcon.png" /></a>
+        <div id="header-profil-bg" class="headerImgProfile" onclick="toggleLogOutPopUp()">
+            <span id="header-profil-initials" class="headerImgInitials"></span>
+        </div>
+    </div>
+    <div id="logOut-popup-bg" onclick="toggleLogOutPopUp()">
+        <div class="logOut-popup" onclick="stopPropagate(event)">
+            <span class="logOut-text popup-link-mobile"><a href="./help.html">Help</a></span>
+            <span class="logOut-text popup-link-mobile"><a href="./legal.html">Legal notice</a></span>
+            <span class="logOut-text" onclick="logOutActiveUser()">Log out</span>
+        </div>
+    </div>
+</header>

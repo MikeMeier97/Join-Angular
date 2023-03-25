@@ -8,10 +8,18 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { AddTaskComponent } from './add-task/add-task.component';
+import { HeaderComponent } from './header/header.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { BoardComponent } from './board/board.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AddTaskComponent,
+    HeaderComponent,
+    SidebarComponent,
+    BoardComponent
   ],
   imports: [
     BrowserModule,

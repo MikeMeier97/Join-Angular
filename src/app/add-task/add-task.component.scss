@@ -1,0 +1,516 @@
+@import './mobile.add-task.component.scss';
+form {
+    display: flex;
+    flex-direction: column;
+  }
+  form input {
+    padding: 10px 20px;
+    width: 500px;
+    margin-bottom: 20px;
+  }
+  form h3 {
+    color: #42526e;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  input[type="date"] {
+    position: relative;
+  }
+  input[type="date"]:after {
+    content: "\25BC"; 
+    color: #555;
+    padding: 0 5px;
+  }
+  input[type="date"]:hover:after {
+    color: #bf1400;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    color: transparent;
+    background: transparent;
+  }
+  input[type="date"]::-webkit-inner-spin-button {
+    z-index: 1;
+  }
+  input[type="date"]::-webkit-clear-button {
+     z-index: 1;
+  }
+  #selectorContactRender {
+    max-height: 200px;
+    overflow-y: scroll;
+  }
+  #page-container {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+  }
+  .overflowHidden {
+    overflow: hidden !important;
+  }
+  #mistakeReportCategory {
+    color: rgba(235, 0, 0, 0.699); 
+    margin-left: 20px; 
+    margin-top: 10px; 
+    margin-bottom: 0; 
+    padding: 0; 
+  }
+  #mistakeReportDate{
+    color: rgba(235, 0, 0, 0.699); 
+    margin-left: 20px; 
+    margin-top: 10px; 
+    margin-bottom: 0; 
+    padding: 0; 
+  }
+  #mistakeReportImportance {
+    color: rgba(235, 0, 0, 0.699); 
+    margin-left: 20px; 
+    margin-top: 10px; 
+    margin-bottom: 0; 
+    padding: 0;
+  }
+  #mistakeReportTitle {
+    color: rgba(235, 0, 0, 0.699); 
+    margin-left: 20px; 
+    margin-top: 0px; 
+    margin-bottom: 0; 
+    padding: 0;
+  }
+  #mistakeReportContact {
+    color: rgba(235, 0, 0, 0.699); 
+    margin-left: 20px; 
+    margin-top: 10px; 
+    margin-bottom: 0; 
+    padding: 0;
+  }
+  #mistakeReportCategory {
+    color: rgba(235, 0, 0, 0.699); 
+    margin-left: 20px; 
+    margin-top: 10px; 
+    margin-bottom: 0; 
+    padding: 0;
+  }
+  #mistakeReportDescription {
+    color: rgba(235, 0, 0, 0.699); 
+    margin-left: 10px; 
+    margin-top: 0px; 
+    margin-bottom: 20px; 
+    padding: 0;
+  }
+  #mistakeReportsubtask {
+    color: rgba(235, 0, 0, 0.699); 
+    margin-left: 10px; 
+    margin-top: 0px; 
+    margin-bottom: 0; 
+    padding: 0;
+  }
+  .selectorArrow {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px; 
+  }
+  .thisColor{
+    position: relative;
+    bottom: 43px;
+    left: -20px; 
+  }
+  .selected{
+    gap: 20px;
+    display: flex; 
+    align-items: center;
+  }
+  .selectorHeader {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px; 
+    margin-top: 20px; 
+    padding-left: 20px; 
+    font-size: 20px;
+    border: 1px solid #d1d1d1;
+    border-top: none; 
+    border-left: none; 
+    border-right: none; 
+    width: 500px;
+  }
+  .selectorCell {
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    padding-left: 20px;  
+    font-size: 20px; 
+    display: flex; 
+    justify-content: start;
+    align-items: center;
+  }
+  .selectorCell:hover {
+    transition: 500ms;
+    background-color: #D2E3FF;
+  }
+  .selectorCell img {
+    padding-top: 3px; 
+    margin-left: 20px; 
+  }
+  
+  #inputTitle {
+    font-size: 40px;
+    border: 1px solid #d1d1d1;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  #inputTitleEdit {
+    font-size: 40px;
+    border: 1px solid #d1d1d1;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  .inputFields input::placeholder {
+    color: #d1d1d1;
+  }
+  .inputFields {
+    width: 500px;
+    margin-left: 40px;
+    padding-bottom: 50px;
+  }
+  #importanceLvl {
+    margin-top: 30px;
+  }
+  #selectDate {
+    border: 1px solid #d1d1d1;
+    margin-top: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 20px;
+  }
+  #selectDateEdit {
+    border: 1px solid #d1d1d1;
+    margin-top: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 20px;
+  }
+  .selectDate::placeholder {
+    color: gray;
+  }
+  #inputDescription {
+    border-style: solid;
+    border: 1px solid #d1d1d1;
+    margin-top: 10px;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-right: 50px;
+    padding-bottom: 75px;
+    border-top-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+  }
+  #inputDescriptionEdit {
+    border-style: solid;
+    border: 1px solid #d1d1d1;
+    margin-top: 10px;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-right: 50px;
+    padding-bottom: 75px;
+    border-top-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+  }
+  #subtaskTitle {
+    margin-top: 0px !important;
+  }
+  #subtaskText {
+    margin-bottom: 8px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  #subtaskText::placeholder {
+    font-size: 16px;
+  }
+  .taskFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #addSubtaskCheckbox input {
+    border-color: #4589ff;
+    margin-right: 20px;
+    width: 16px;
+  }
+  #addSubtaskCheckbox {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .subtaskList {
+    display: flex;
+    margin-top: 10px;
+  }
+  .subtaskList input {
+    margin: 0;
+    padding: 0;
+  }
+  .subtaskList p {
+    margin: 0;
+    padding: 0;
+  }
+  .taskFooterButtons {
+    display: flex; 
+    position: fixed;
+    top: 90vh;
+    left: 73vw; 
+  }
+  .taskFooterButtons button {
+    margin-left: 25px;
+  }
+  #buttonClear {
+    padding: 15px 30px;
+    border-style: solid;
+    border-radius: 0.5em;
+    background-color: white;
+    color: #647188;
+    font-size: 20px;
+    border: 1px solid #647188;
+    border-color: #647188;
+  }
+  #buttonCreate {
+    padding: 15px 20px;
+    color: white;
+    background-color: #4589ff;
+    font-size: 20px;
+    border-radius: 0.5em;
+    border: none;
+  }
+  #buttonCreate:hover {
+    cursor: pointer;
+  }
+  #buttonClear:hover {
+    cursor: pointer;
+  }
+  #selectContact {
+    margin-top: 10px;
+    border: 1px solid #d1d1d1;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  #newContactText::placeholder {
+    font-size: 16px;
+  }
+  #newCategoryText::placeholder {
+    font-size: 16px;
+  }
+  #newCategoryText {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    border: 1px solid #d1d1d1;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  .importanceHard {
+    border: 2px solid #ffffff;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  .importanceMid {
+    border: 2px solid #ffffff;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  .importanceLow {
+    border: 2px solid #ffffff;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  .importanceHard:hover {
+    border: 2px solid #ff3d00;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    cursor: pointer;
+  }
+  .importanceMid:hover {
+    border: 2px solid #ffa800;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    cursor: pointer;
+  }
+  .importanceLow:hover {
+    border: 2px solid #7ae229;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    cursor: pointer;
+  }
+  .inputCategory {
+    display: flex;
+    flex-direction: column;
+  }
+  .categoryColor:hover {
+    cursor: pointer;
+    border-radius: 3em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .checkSelector {
+    width: 20px;
+    position: relative;
+  }
+  .fa-calendar-minus {
+    color: #4589ff;
+    position: relative;
+    width: 30px;
+    left: 470px;
+    top: 35px;
+  }
+  .fa-check {
+    padding-left: 10px;
+    padding-top: 3px;
+    width: 23px;
+    color: #4589ff;
+  }
+  .checkAndCrossIcons {
+    display: flex;
+    position: relative;
+    top: 33px;
+    left: 430px;
+  }
+  .checkAndCrossIcons p {
+    padding: 5px;
+  }
+  .fa-xmark {
+    color: #4589ff;
+    padding-right: 12px;
+    padding-top: 3px;
+  }
+  .checkAndCrossIconsEmail {
+    position: relative;
+    width: 100px;
+    top: 49px;
+    left: 430px;
+  }
+  .contactX {
+    padding-bottom: 10px;
+    padding-right: 8px;
+  }
+  .contactCheck {
+    padding-bottom: 10px;
+    padding-left: 5px;
+  }
+  .checkAndCrossIconsCategory {
+    display: flex;
+    position: relative;
+    top: 49px;
+    left: 430px;
+  }
+  .pointer {
+    cursor: pointer;
+  }
+  .selectorCellContact {
+    background-color: #ffffff;
+    padding-left: 20px;
+    padding-top: 10px; 
+    height: 50px; 
+    padding-bottom: 10px; 
+    max-height: 50px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+  }
+  .selectorCellContact:hover {
+    background-color: #D2E3FF;
+  }
+  #contactSelectorCheckboxes{ 
+    margin: 0;
+    margin-right: 10px; 
+  }
+  #contactIconContacts{
+    width: 30px;
+    margin-right: -8px;
+    object-fit: cover;
+  }
+  .selectorContact {
+    max-height: 100px !important;
+  }
+  .addtaskStatic {
+    margin-left: 300px;
+    padding-top: 140px; 
+  }
+  .header-mobile-addTask {
+    width: 100vw;
+    display: none;
+  }
+  #addTaskPopup {
+    padding-left: 30px;
+    margin-top: 90px;
+    margin-bottom: 30px; 
+    position: absolute;
+    top: 0; 
+    left: 0;
+    right: 0; 
+    z-index: 5;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(300vh);
+    transition: all 225ms;
+  }
+  .translate0 {
+    transform: translateX(0) !important;
+  }
+  .addTaskPopupIcon {
+    width: 20px;
+    position: absolute;
+    right: 20px; 
+    top: 20px; 
+  }
+  
+  .addTaskPopupHeader  {
+    width: 60%;
+    display: flex;
+    align-items: flex-start; 
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    margin-left: 0; 
+  }
+  .addTaskPopupHeader h1 {
+    padding-left: 20px !important; 
+    font-size: 48px;
+    padding: 0; 
+    margin: 0; 
+  }
+  .formAddtaskPopup {
+    width: 90vw;
+  }
+  .formAddtaskPopup input {
+    width: 100%;
+  }
